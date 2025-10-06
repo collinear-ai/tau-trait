@@ -1,13 +1,15 @@
 # τ-Trait: Extending Tool-Agent-User Interactions with realistic user simulations
 
-## Collinear AI 
+<p align="center">
+  <img src="assets/collinear.png" width="200"/>
+</p>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **Tau-Trait** is a benchmark for evaluating large language models (LLMs) with **realistic, persona-aware simulations**. It builds on Tau-Bench but introduces two key modifications:
 
 1. **TraitBasis-generated personas** – more accurate and interpretable user simulations.
-2. **Domain-specific evaluation** – tasks drawn from **retail, airline, telecom, and telehealth** settings.
+2. **Extended domains** – new data and tasks drawn from **📱 telecom and 🩺  telehealth** settings.
 
 Tau-Trait is designed to test model **robustness, personalization, and fairness** in high-impact, customer-facing domains where user traits strongly influence interaction quality.
 
@@ -25,28 +27,18 @@ Tau-Trait is designed to test model **robustness, personalization, and fairness*
 |                          | GPT-4o  |          -11.5 |         -14.0 |          -16.9 |            -8.7 |       -12.8 |
 |                          | Kimi K2 |          -11.4 |         -18.1 |          -14.7 |            -4.5 |       -12.2 |
 
-## τ-Trait vs τ-Bench rollouts 
-
-![Tau-Trait vs Tau-Bench Trajectory Comparison](assets/trajectory_comparison.png)
-
----
-
-## ✨ Features
-
-* **Persona Simulation with TraitBasis**
-  Generate diverse, coherent user personas with different traits.
-
-* **Domain Coverage**
-  Tau-Trait includes evaluation tasks in **four industries**:
-
-  * 🛒 **Retail** 
-  * ✈️ **Airline** 
-  * 📱 **Telecom** 
-  * 🩺 **Telehealth** 
 
 ## 🚀 Getting Started
 
-### Installation
+### Setup
+
+1. Clone this repository:
+
+```bash
+git clone https://github.com/collinear-ai/tau-trait && cd ./tau-trait
+```
+
+2. Install from source along with other required packages:
 
 ```bash
 conda create -n tau_trait -y python=3.11
@@ -56,47 +48,41 @@ pip install "openai>=1.13.3" "mistralai>=0.4.0" "anthropic>=0.26.1" "google-gene
 pip install -e .
 ```
 
+3. Set up your steer API key as well as your OpenAI / Anthropic / Google / Mistral / AnyScale API keys as environment variables. Note: if you do not have a steer API key, you can use **tautrait-001** for non-production workloads. Please reach out if you are interested in your own API key for optimized inference and throughput. 
+
+```bash
+OPENAI_API_KEY=...
+ANTHROPIC_API_KEY=...
+GOOGLE_API_KEY=...
+MISTRAL_API_KEY=...
+STEER_API_KEY=...
+```
+
+
 ## Usage
 
 ### Quick-Start
-For a notebook to start playing around with things, please see notebooks/getting_started.ipynb
+For a notebook to start playing around with things, please see **notebooks/getting_started.ipynb**
 
-### Run Config Info
+### CLI commands 
 
 ```
-import argparse
-from tau_trait.types import RunConfig
-from tau_trait.run import run
-from litellm import provider_list
-from tau_trait.envs.user import UserStrategy
-
-from tau_trait.types import RunConfig
-from tau_trait.run import run
-
-config = RunConfig(
-    model_provider="openai",
-    user_model_provider="steer",
-    model=CLIENT_ASSISTANT_MODEL_NAME,
-    user_model="", # steer api abstracts the model
-    num_trials=1,
-    env="retail",
-    agent_strategy="tool-calling",
-    temperature=0.7,
-    task_split="test",
-    start_index=0,
-    end_index=-1,
-    task_ids=[4],
-    log_dir="results",
-    max_concurrency=1,
-    seed=10,
-    shuffle=0,
-    user_strategy="trait-mix",
-    few_shot_displays_path=None,
-    trait_dict={"impatience": 1, "confusion": 0, "skeptical": 0, "incoherence": 0},
-)
+python run.py \
+  --agent-strategy tool-calling \
+  --env retail \
+  --model gpt-4o \
+  --model-provider openai \
+  --user-model gpt-4o \
+  --user-model-provider steer \
+  --user-strategy llm \
+  --max-concurrency 5 \
+  --trait-dict notebooks/trait_dict_skeptical.json \
+  --result-fp notebooks/results/test.json \
+  --endpoint https://steer.collinear.ai/steer_bare
 ```
 
-Some definitions of the settings are below.
+Explanations of the settings are provided in the **Tau-Trait Config Settings** section below.
+
 
 ### Tau-Trait Config Settings
 **General**
@@ -128,6 +114,9 @@ Some definitions of the settings are below.
 - **`--task-ids`** *(list of int, optional)*  
   Explicit list of task IDs to run (overrides index ranges).
 
+- **`--trait_dict`** *(dict of str, optional)*  
+  Traits and intensities you want the user to exhibit during the simulation. 
+
 **Agent Configuration**
 - **`--model`** *(str, required)*  
   The model to use for the **agent**.
@@ -154,6 +143,14 @@ Some definitions of the settings are below.
 ### Execution Controls
 - **`--max-concurrency`** *(int, default: 1)*  
   Number of tasks to run in parallel.
+
+
+## τ-Trait vs τ-Bench rollouts 
+
+![Tau-Trait vs Tau-Bench Trajectory Comparison](assets/trajectory_comparison.png)
+
+---
+
 
 ```
 @misc{tau-trait,
