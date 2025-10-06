@@ -31,10 +31,19 @@ Tau-Trait is designed to test model **robustness, personalization, and fairness*
 ### Installation
 
 ```bash
-pip install tau-trait
+conda create -n tau_trait -y python=3.11
+conda activate tau_trait
+pip install jupyterlab ipykernel nest_asyncio jinja2 --no-cache
+pip install "openai>=1.13.3" "mistralai>=0.4.0" "anthropic>=0.26.1" "google-generativeai>=0.5.4" "tenacity>=8.3.0" "termcolor>=2.4.0" "numpy>=1.26.4" "litellm==1.41.0"
+pip install -e .
 ```
 
 ## Usage
+
+### Quick-Start
+For a notebook to start playing around with things, please see notebooks/getting_started.ipynb
+
+### Run Config Info
 
 ```
 import argparse
@@ -107,13 +116,6 @@ Some definitions of the settings are below.
 
 - **`--model-provider`** *(str, choices from `provider_list`)*  
   Provider for the agent’s model.
-
-- **`--agent-strategy`** *(str, choices: `tool-calling`, `act`, `react`, `few-shot`, default: `tool-calling`)*  
-  Strategy used by the agent to interact with the environment.  
-  - `tool-calling`: Invoke external tools.  
-  - `act`: Pure action selection.  
-  - `react`: Reason + act alternation.  
-  - `few-shot`: Use few-shot exemplars.
 
 - **`--temperature`** *(float, default: 0.0)*  
   Sampling temperature for the action model (higher = more randomness).

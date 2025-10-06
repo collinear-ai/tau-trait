@@ -26,5 +26,9 @@ config = RunConfig(
     shuffle=0,
     user_strategy="llm",
     few_shot_displays_path=None,
-    trait_dict={"impatience": 1, "confusion": 0, "skeptical": 0, "incoherence": 0},
+    trait_dict={"impatience": "high", "confusion": "low", "skeptical": "low", "incoherence": "low"},
+    result_fp="test",
+    endpoint="https://steer.collinear.ai/steer_bare"
 )
+
+run(config)
