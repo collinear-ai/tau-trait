@@ -1,6 +1,0 @@
-{
-    "name": "glm-4p5", 
-    "provider": "fireworks_ai", 
-    "model": "glm-4p5", 
-    "max_concurrency": 8
-}
