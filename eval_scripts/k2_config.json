@@ -1,0 +1,6 @@
+{
+    "name": "k2", 
+    "provider": "fireworks_ai", 
+    "model": "kimi-k2-instruct-0905", 
+    "max_concurrency": 8
+}

@@ -1,0 +1,6 @@
+{
+    "name": "gpt-4o", 
+    "provider": "openai", 
+    "model": "gpt-4o", 
+    "max_concurrency": 16
+}

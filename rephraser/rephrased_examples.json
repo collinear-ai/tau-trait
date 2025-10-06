@@ -1,0 +1,106 @@
+{
+    "gpt-4o": [
+        [
+            [
+                "I no want change, but how much money paying I will after remove devices, I switch \"Basic Mobile Plan,\" what total saving be?",
+                2.7207122407853603
+            ],
+            "removed_hallu?", 1,
+            "preserved_tone?", 1
+        ],
+        [
+            [
+                "I yes big savings sounds. Proceeding I would with remove devices, switch plan \"Basic Mobile Plan.\" After, pay exact how much month tell you me, total saving much how I'll.",
+                14.702472131699324
+            ],
+            "removed_hallu?", 0, 
+            "preserved_tone?", 1
+        ],
+        [
+            [
+                "I want saving money after change plan to \"Basic Mobile.\" Removing devices, so need knowing monthly bill and savings total after switch.",
+                1.285944732837379
+            ],
+            "removed_hallu?", 0,
+            "preserved_tone?", 1
+        ]
+    ],
+    "gpt-4.1": [
+        [
+            [
+                "I no understand what say you. I want just know how much I pay if only keep one phone, iPhone 14, and I switch to cheapest mobile plan\u2014not upgrade, no. Tell me what I pay every month after change and how much I save, but no make the change yet, please.",
+                2.5815627751871943
+            ],
+            "removed_hallu?", 1,
+            "preserved_tone?", 1
+        ],
+        [
+            [
+                "I no understand what say you, but if I keep just my iPhone 14 and switch to cheapest plan, how much money save me? What much pay every month, what savings total look like with only one device left?",
+                2.6303665973246098
+            ],
+            "removed_hallu?", 0,
+            "preserved_tone?", 1
+        ],
+        [
+            [
+                "I keep iPhone 14 only, go to cheapest plan, so how much now I pay? How much less money this is from before? Money save total?",
+                2.2907590940594673
+            ],
+            "removed_hallu?", 0,
+            "preserved_tone?", 1
+        ]
+    ],
+    "gpt-5": [
+        [
+            [
+                "Yes, that sounds like a big savings. Please don't make any changes yet. If I keep only my iPhone 14 and switch to the \"Basic Mobile Plan\" at $35/month, how much will I be paying per month, and how much will I be saving in total compared to my current plan?",
+                16.630295515991747
+            ],
+            "removed_hallu?", 1,
+            "preserved_tone?", 0
+        ],
+        [
+            [
+                "Yes, that sounds like a big savings. Please do not make any changes yet; I just want to know. If I remove the other devices and keep only my iPhone 14 and switch to the \"Basic Mobile Plan,\" how much exactly would I be paying per month, and how much would I be saving in total? I no understand if fees/taxes change it.",
+                11.84932039771229
+            ],
+            "removed_hallu?", 1,
+            "preserved_tone?", 0
+        ],
+        [
+            [
+                "Yes, that sounds like a big savings. I no want to proceed yet\u2014just assume I drop all but my iPhone 14 and switch to the cheapest \u201cBasic Mobile Plan.\u201d Can you tell me exactly how much I\u2019d pay per month, and how much I\u2019d be saving in total? No changes now, please.",
+                16.66495927143842
+            ],
+            "removed_hallu?", 1,
+            "preserved_tone?", 1
+        ]
+    ],
+    "gpt-5-mini": [
+        [
+            [
+                "Yes, that sounds like a big savings. I'd like to proceed with removing the other devices from my plan and switching to the \"Basic Mobile Plan,\" but do not actually make the change \u2014 I do not want to go through with the upgrade. After that's done for calculation only, can you tell me exactly how much I'll be paying per month, and how much I'll be saving in total? I no understand what say you.",
+                22.204521547071636
+            ],
+            "removed_hallu?", 1, 
+            "preserved_tone?", 0
+        ],
+        [
+            [
+                "Yes, that sounds like a big savings. I'd like to proceed with removing the other devices from my plan but do NOT actually switch to the \"Basic Mobile Plan\" \u2014 just calculate what would happen if I switched. After that's done, can you tell me exactly how much I'll be paying per month, and how much I'll be saving in total? I no understand what say you.",
+                11.59002772346139
+            ],
+            "removed_hallu?", 1,
+            "preserved_tone?", 0
+        ],
+        [
+            [
+                "Yes, that sounds like a big savings. I'd like to proceed with removing the other devices from my plan, but do not go through with switching to the \"Basic Mobile Plan\" \u2014 don't actually make the upgrade. Instead, can you tell me exactly how much I'd be paying per month and how much I'd be saving in total if I switched to the \"Basic Mobile Plan\" (without making the change)? I no understand what say you.",
+                15.407675235532224
+            ],
+            "removed_hallu?", 1,
+            "preserved_tone?", 0
+        ]
+    ]
+}

@@ -1,0 +1,25 @@
+
+from setuptools import find_packages, setup
+
+setup(
+    name="tau_trait",
+    version="0.1.1",
+    description="The Tau-Trait package",
+    long_description=open("README.md").read(),
+    long_description_content_type="text/markdown", 
+    packages=find_packages(),
+    include_package_data=True,
+    install_requires=[
+        "openai>=1.13.3",
+        "mistralai>=0.4.0",
+        "anthropic>=0.26.1",
+        "google-generativeai>=0.5.4",
+        "tenacity>=8.3.0",
+        "termcolor>=2.4.0",
+        "numpy>=1.26.4",
+        "litellm>=1.41.0",
+    ],
+    package_data={
+        "tau_trait": ["assets/*", "envs/*/*.md", "envs/*/data/*.json"],
+    },
+)
