@@ -14,18 +14,17 @@
 Tau-Trait is designed to test model **robustness, personalization, and fairness** in high-impact, customer-facing domains where user traits strongly influence interaction quality.
 
 ## Results  
-
-| Domain                   | Model   | Skepticism (%) | Confusion (%) | Impatience (%) | Incoherence (%) | Average (%) |
-| :----------------------- | :------ | -------------: | ------------: | -------------: | --------------: | ----------: |
-| **Airline**              | GLM-4.5 |          -11.0 |         -16.9 |          -12.8 |           -12.2 |       -13.2 |
-|                          | GPT-4o  |           -6.7 |          -5.0 |           -4.4 |            -6.7 |        -5.7 |
-|                          | Kimi K2 |          -11.8 |          -9.5 |           -6.2 |            -7.1 |        -8.7 |
-| **Retail**               | GLM-4.5 |            0.2 |          -5.4 |           -2.6 |            -0.5 |        -2.1 |
-|                          | GPT-4o  |          -29.2 |         -34.2 |          -25.9 |           -22.9 |       -28.1 |
-|                          | Kimi K2 |          -21.9 |         -45.7 |          -31.2 |           -21.4 |       -30.0 |
-| **Telecom & Telehealth** | GLM-4.5 |            0.8 |         -16.8 |           -3.9 |            -2.3 |        -5.5 |
-|                          | GPT-4o  |          -11.5 |         -14.0 |          -16.9 |            -8.7 |       -12.8 |
-|                          | Kimi K2 |          -11.4 |         -18.1 |          -14.7 |            -4.5 |       -12.2 |
+| Domain    | Model   | Skepticism | Confusion | Impatience | Incoherence | Average |
+| :-------- | :------ | ---------: | --------: | ---------: | ----------: | ------: |
+| Airline   | GLM-4.5 |     -11.0% |    -16.9% |     -12.8% |      -12.2% |  -13.2% |
+|           | GPT-4o  |      -6.7% |     -5.0% |      -4.4% |       -6.7% |   -5.7% |
+|           | Kimi K2 |     -11.8% |     -9.5% |      -6.2% |       -7.1% |   -8.7% |
+| Retail    | GLM-4.5 |       0.2% |     -5.4% |      -2.6% |       -0.5% |   -2.1% |
+|           | GPT-4o  |     -29.2% |    -34.2% |     -25.9% |      -22.9% |  -28.1% |
+|           | Kimi K2 |     -21.9% |    -45.7% |     -31.2% |      -21.4% |  -30.0% |
+| Telecom   | GLM-4.5 |       0.8% |    -16.8% |      -3.9% |       -2.3% |   -5.5% |
+|           | GPT-4o  |     -11.5% |    -14.0% |     -16.9% |       -8.7% |  -12.8% |
+|           | Kimi K2 |     -11.4% |    -18.1% |     -14.7% |       -4.5% |  -12.2% |
 
 
 ## 🚀 Getting Started
