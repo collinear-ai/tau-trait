@@ -1,2 +1,2 @@
-# tau-trait
-TraitBasis applied to TauBench
+# Tau-Trait
+This repo is a collection of tasks for generating dynamic simulations of TraitBasis applied to TauBench. Coming soon.
