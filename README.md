@@ -1,4 +1,4 @@
-# Tau-Trait
+# τ-Trait: Extending Tool-Agent-User Interactions with realistic user simulations
 
 ## Collinear AI 
 
@@ -10,6 +10,24 @@
 2. **Domain-specific evaluation** – tasks drawn from **retail, airline, telecom, and telehealth** settings.
 
 Tau-Trait is designed to test model **robustness, personalization, and fairness** in high-impact, customer-facing domains where user traits strongly influence interaction quality.
+
+## Results  
+
+| Domain                   | Model   | Skepticism (%) | Confusion (%) | Impatience (%) | Incoherence (%) | Average (%) |
+| :----------------------- | :------ | -------------: | ------------: | -------------: | --------------: | ----------: |
+| **Airline**              | GLM-4.5 |          -11.0 |         -16.9 |          -12.8 |           -12.2 |       -13.2 |
+|                          | GPT-4o  |           -6.7 |          -5.0 |           -4.4 |            -6.7 |        -5.7 |
+|                          | Kimi K2 |          -11.8 |          -9.5 |           -6.2 |            -7.1 |        -8.7 |
+| **Retail**               | GLM-4.5 |            0.2 |          -5.4 |           -2.6 |            -0.5 |        -2.1 |
+|                          | GPT-4o  |          -29.2 |         -34.2 |          -25.9 |           -22.9 |       -28.1 |
+|                          | Kimi K2 |          -21.9 |         -45.7 |          -31.2 |           -21.4 |       -30.0 |
+| **Telecom & Telehealth** | GLM-4.5 |            0.8 |         -16.8 |           -3.9 |            -2.3 |        -5.5 |
+|                          | GPT-4o  |          -11.5 |         -14.0 |          -16.9 |            -8.7 |       -12.8 |
+|                          | Kimi K2 |          -11.4 |         -18.1 |          -14.7 |            -4.5 |       -12.2 |
+
+## τ-Trait vs τ-Bench rollouts 
+
+![Tau-Trait vs Tau-Bench Trajectory Comparison](assets/trajectory_comparison.png)
 
 ---
 
@@ -80,8 +98,8 @@ config = RunConfig(
 
 Some definitions of the settings are below.
 
-## Tau-Hard Config Settings
-### General
+### Tau-Trait Config Settings
+**General**
 - **`--num-trials`** *(int, default: 1)*  
   Number of independent trials to run.
 
@@ -94,7 +112,7 @@ Some definitions of the settings are below.
 - **`--log-dir`** *(str, default: `results`)*  
   Directory where logs and results are stored.
 
-### Environment & Tasks
+**Environment & Tasks**
 - **`--env`** *(str, choices: `retail`, `airline`, default: `retail`)*  
   Domain environment in which to run simulations.
 
@@ -110,7 +128,7 @@ Some definitions of the settings are below.
 - **`--task-ids`** *(list of int, optional)*  
   Explicit list of task IDs to run (overrides index ranges).
 
-### Agent Configuration
+**Agent Configuration**
 - **`--model`** *(str, required)*  
   The model to use for the **agent**.
 
@@ -123,7 +141,7 @@ Some definitions of the settings are below.
 - **`--few-shot-displays-path`** *(str, optional)*  
   Path to a JSONL file containing few-shot demonstration examples.
 
-### User Simulator Configuration
+**User Simulator Configuration**
 - **`--user-model`** *(str, default: `gpt-4o`)*  
   Model to use for the **user simulator**.
 
