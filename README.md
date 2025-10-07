@@ -154,11 +154,11 @@ Explanations of the settings are provided in the **Tau-Trait Config Settings** s
 
 
 ```
-@misc{tau-trait,
-  author       = {Mackey, Tsach; Rajeev, Meghana; Kumar, Anand; He, Muyu; Rajani, Nazneen},
-  title        = {Tau-Trait},
+@article{he2025impatient,
+  title        = {Impatient Users Confuse AI Agents: High-fidelity Simulations of Human Traits for Testing Agents},
+  author       = {He, Muyu and Kumar, Anand and Mackey, Tsach and Rajeev, Meghana and Zou, James and Rajani, Nazneen},
+  journal      = {arXiv preprint arXiv:2510.04491},
   year         = {2025},
-  month        = {Sep},
-  howpublished = {\url{https://pypi.org/project/tau-trait/}}
+  url          = {https://arXiv.org/abs/2510.04491}
 }
 ```
