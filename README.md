@@ -1,19 +1,21 @@
-# τ-Trait: Extending Tool-Agent-User Interactions with realistic user simulations
-
 <p align="center">
   <img src="assets/collinear.png" width="200"/>
 </p>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# τ-Trait: Extending Tool-Agent-User Interactions with realistic user simulations
 
-**Tau-Trait** is a benchmark for evaluating large language models (LLMs) with **realistic, persona-aware simulations**. It builds on Tau-Bench but introduces two key modifications:
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) &nbsp; &nbsp; [![arXiv](https://img.shields.io/badge/arxiv-2510.04491-b31b1b)](https://arxiv.org/abs/2510.04491) &nbsp; &nbsp; [![Blog:TraitBasis](https://img.shields.io/badge/Blog-TraitBasis-orange)](https://blog.collinear.ai/p/trait-basis) &nbsp; &nbsp; [![Notebook:simulations](https://img.shields.io/badge/Notebook-simulations-blue)](https://github.com/collinear-ai/simulations)
+
+**$\tau$-Trait** is a benchmark for evaluating large language models (LLMs) with **realistic, persona-aware simulations**. It builds on $\tau$-Bench but introduces two key modifications:
 
 1. **TraitBasis-generated personas** – more accurate and interpretable user simulations.
 2. **Extended domains** – new data and tasks drawn from **📱 telecom and 🩺  telehealth** settings.
 
-Tau-Trait is designed to test model **robustness, personalization, and fairness** in high-impact, customer-facing domains where user traits strongly influence interaction quality.
+$\tau$-Trait is designed to test model **robustness, personalization, and fairness** in high-impact, customer-facing domains where user traits strongly influence interaction quality.
 
 ## Results  
+Drops in agent performance with user simulations with TraitBasis relative to without any traits, averaged across 3 runs.
+
 | Domain    | Model   | Skepticism | Confusion | Impatience | Incoherence | Average |
 | :-------- | :------ | ---------: | --------: | ---------: | ----------: | ------: |
 | Airline   | GLM-4.5 |     -11.0% |    -16.9% |     -12.8% |      -12.2% |  -13.2% |
