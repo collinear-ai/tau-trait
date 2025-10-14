@@ -49,7 +49,7 @@ pip install "openai>=1.13.3" "mistralai>=0.4.0" "anthropic>=0.26.1" "google-gene
 pip install -e .
 ```
 
-3. Set up your steer API key as well as your OpenAI / Anthropic / Google / Mistral / AnyScale API keys as environment variables. Note: if you do not have a steer API key, you can use **tautrait-001** for non-production workloads. Please reach out if you are interested in your own API key for optimized inference and throughput. 
+3. Set up your steer API key (for the user model) and your OpenAI / Anthropic / Google / Mistral / AnyScale API keys (for the assistant model) as environment variables. Note: if you do not have a steer API key, you can use **tautrait-001** for non-production workloads. Please reach out if you are interested in your own API key for optimized inference and throughput. 
 
 ```bash
 OPENAI_API_KEY=...
